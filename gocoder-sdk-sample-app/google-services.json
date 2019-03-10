@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "76867618202",
+    "firebase_url": "https://kmc1-b2605.firebaseio.com",
+    "project_id": "kmc1-b2605",
+    "storage_bucket": "kmc1-b2605.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:76867618202:android:bd04761fff4819c5",
+        "android_client_info": {
+          "package_name": "com.wowza.gocoder.sdk.sampleapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "76867618202-6os4u8nma77ebqrhr1ceu2m2lf8vgvt0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbktZQ93XPoNhuwUKmkZDNClXosOIsAJw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
