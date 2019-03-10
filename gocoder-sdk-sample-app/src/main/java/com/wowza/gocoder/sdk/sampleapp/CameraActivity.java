@@ -22,7 +22,6 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.wowza.gocoder.sdk.api.devices.WOWZCamera;
-import com.wowza.gocoder.sdk.api.logging.WOWZLog;
 import com.wowza.gocoder.sdk.sampleapp.ui.AutoFocusListener;
 import com.wowza.gocoder.sdk.sampleapp.ui.MultiStateButton;
 import com.wowza.gocoder.sdk.sampleapp.ui.TimerView;
@@ -34,6 +33,7 @@ public class CameraActivity extends CameraActivityBase   {
     protected MultiStateButton      mBtnSwitchCamera  = null;
     protected MultiStateButton      mBtnTorch         = null;
     protected TimerView             mTimerView        = null;
+    
 
     // Gestures are used to toggle the focus modes
     protected GestureDetectorCompat mAutoFocusDetector = null;
