@@ -1,5 +1,7 @@
 package com.wowza.gocoder.sdk.sampleapp;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -55,9 +57,17 @@ public class LoginActivity extends AppCompatActivity {
         SgnUp=(Button)findViewById(R.id.SgnUpBtn);
         LogIn=(Button)findViewById(R.id.LogInBtn);
         SgnUpChg=(TextView) findViewById(R.id.SgnUpChg);
+        LogInChg=(TextView)findViewById(R.id.LogInChg);
+
         Display display = getWindowManager().getDefaultDisplay();
         htpage=display.getHeight();
-                LogInChg=(TextView)findViewById(R.id.LogInChg);
+
+        SgnUpCrd.setVisibility(View.GONE);
+        ObjectAnimator animation = ObjectAnimator.ofFloat(SgnUpCrd, "translationY", -htpage);
+        animation.setDuration(100);
+        animation.start();
+        SgnUpCrd.setVisibility(View.VISIBLE);
+
 
                 LogInChg.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -67,22 +77,35 @@ public class LoginActivity extends AppCompatActivity {
                         animation.setDuration(1000);
                         animation.start();
                         ObjectAnimator trial = ObjectAnimator.ofFloat(LogInCrd, "translationY", htpage);
-                        trial.setDuration(1000);
+                        trial.setDuration(1000).addListener(new AnimatorListenerAdapter() {
+                            @Override
+                            public void onAnimationEnd(Animator animation) {
+                                LogInCrd.setVisibility(View.GONE);
+                                //super.onAnimationEnd(animation);
+                            }
+                        });
                         trial.start();
-                        LogInCrd.setVisibility(View.GONE);
+
+                      //  LogInCrd.setVisibility(View.GONE);
                     }
                 });
         SgnUpChg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LogInCrd.setVisibility(View.VISIBLE);
-                ObjectAnimator animation = ObjectAnimator.ofFloat(LogInCrd, "translationY", 0);
+               LogInCrd.setVisibility(View.VISIBLE);
+                ObjectAnimator animation = ObjectAnimator.ofFloat(SgnUpCrd, "translationY", -htpage);
                 animation.setDuration(1000);
                 animation.start();
-                ObjectAnimator trial = ObjectAnimator.ofFloat(SgnUpCrd, "translationY", htpage);
-                trial.setDuration(1000);
+                ObjectAnimator trial = ObjectAnimator.ofFloat(LogInCrd, "translationY", 0);
+                trial.setDuration(1000).addListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        SgnUpCrd.setVisibility(View.GONE);
+                        //super.onAnimationEnd(animation);
+                    }
+                });
                 trial.start();
-                SgnUpCrd.setVisibility(View.GONE);
+             //   SgnUpCrd.setVisibility(View.GONE);
             }
         });
 

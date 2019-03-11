@@ -118,7 +118,7 @@ public class AboutFragment extends Fragment {
         // Inflate the layout for this fragment
         View fragmentView = inflater.inflate(R.layout.fragment_about, container, false);
         if (fragmentView != null)
-            fragmentView.setBackgroundColor(ContextCompat.getColor(getActivity(), android.R.color.background_dark));
+            fragmentView.setBackgroundColor(ContextCompat.getColor(getActivity(), android.R.color.white));
 
         // Populate the list view
         ExpandableListView listView = (ExpandableListView) fragmentView.findViewById(R.id.info_list);

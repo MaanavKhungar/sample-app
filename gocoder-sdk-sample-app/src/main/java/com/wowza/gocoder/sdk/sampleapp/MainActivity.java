@@ -130,8 +130,8 @@ public class MainActivity extends ListActivity {
         if(mAuth.getCurrentUser()==null)
         {
             Intent i=new Intent(getApplicationContext(),LoginActivity.class) ;
-            startActivity(i);
-            finish();
+         //  startActivity(i);
+          // finish();
         }
     }
 

@@ -251,7 +251,7 @@ public class GoCoderSDKPrefs {
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View view = super.onCreateView(inflater, container, savedInstanceState);
             if (view != null)
-                view.setBackgroundColor(ContextCompat.getColor(getActivity(), android.R.color.background_dark));
+                view.setBackgroundColor(ContextCompat.getColor(getActivity(), android.R.color.white));
 
             View rootView = getActivity().getWindow().getDecorView().findViewById(android.R.id.content);
             if (rootView != null) {

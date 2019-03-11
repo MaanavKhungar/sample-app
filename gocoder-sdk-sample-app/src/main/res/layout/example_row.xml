@@ -22,12 +22,14 @@
         <TextView
             android:id="@+id/example_title"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/greyBG"
             android:text="List Item Title"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/example_description"
+            android:visibility="gone"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="List item description" />
